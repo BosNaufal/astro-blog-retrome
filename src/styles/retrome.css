@@ -1,0 +1,8 @@
+.retrome-shadow {
+    box-shadow: 4px 4px 0 1px #000;
+    border-color: #000;
+}
+
+.retrome-shadow-sm {
+    box-shadow: 2px 2px 0 1px #000;
+}

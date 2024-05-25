@@ -1,0 +1,85 @@
+---
+const menus = [
+    {
+        text: 'Home',
+        link: '#',
+        submenus: []
+    },
+    {
+        text: 'Header Styles',
+        link: '#',
+        submenus: [
+            {text: 'Submenu 1', link: '#'},
+            {text: 'Submenu 2', link: '#'},
+        ]
+    },
+    {
+        text: 'Post Features',
+        link: '#',
+        submenus: []
+    },
+    {
+        text: 'Features',
+        link: '#',
+        submenus: [
+            {text: 'Submenu 1', link: '#'},
+            {text: 'Submenu 2', link: '#'},
+        ]
+    },
+    {
+        text: 'Contact',
+        link: '#',
+        submenus: []
+    },
+]
+---
+<div class="navbar bg-black text-white border-b border-t-4 border-black">
+    <div class="container container-lg mx-auto px-4">
+        <div class="navbar-start flex items-center">
+            <a class="btn btn-ghost -mt-1 hover:bg-transparent text-xl">RETROME</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="flex items-center">
+                {menus.map((item, index) => (
+                        <li class="dropdown dropdown-hover">
+                            <a href={item.link}
+                               class="btn btn-ghost flex items-center uppercase text-lg hover:bg-transparent focus:bg-transparent m-1">
+                                <span>{item.text}</span>
+                                {item.submenus && item.submenus.length > 0 ?
+                                        <svg class="-mt-1" width="25" height="25" viewBox="0 0 15 15" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z"
+                                                  fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                        </svg>
+                                    : null}
+                            </a>
+                            {item.submenus && item.submenus.length > 0 ?
+                                    <ul class="dropdown-content text-black retrome-shadow-sm border-4 border-black z-[1] menu p-2 bg-base-100 rounded-box w-52">
+                                        {item.submenus.map((submenu) => (
+                                                <li><a href={item.link}
+                                                       class="text-sm font-bold uppercase rounded-none hover:bg-secondary">{submenu.text}</a>
+                                                </li>
+                                        ))}
+                                    </ul>
+                                : null}
+                        </li>
+                ))}
+                <li class="dropdown dropdown-hover">
+                    <a href="#" class="btn btn-ghost text-lg hover:bg-transparent focus:bg-transparent">
+                        <div class="leading-none">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
+                                      fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <span class="uppercase">Search</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+        </div>
+        <a class="btn btn-active btn-secondary text-black hover:text-black retrome-shadow px-8">SUBSCRIBE</a>
+    </div>
+</div>
