@@ -70,17 +70,19 @@ const postList = [
                             </div>
                         :
                             <div class="post-item md:flex mb-12 gap-10">
-                                <div class="mr-10 xl:mr-0 flex-1">
-                                    <div class="border-8 rounded-md retrome-shadow bg-gray-200 w-full h-[330px] lg:w-[330px]"></div>
+                                <div class="mr-0 flex-1">
+                                    <div class="border-8 rounded-md retrome-shadow bg-gray-200 w-full h-[330px] md:w-[330px]"></div>
                                 </div>
-                                <div class="mt-4">
+                                <div class="mt-6">
                                     <h2 class="post-title text-lg leading-normal lg:text-2xl font-bold"><a
                                             href="#">{post.title}</a>
                                     </h2>
                                     <PostMeta/>
-                                    <p class="text-sm lg:text-lg">{post.excerpt}</p>
-                                    <a class="mt-6 btn btn-primary text-white hover:bg-primary/90 hover:text-white retrome-shadow">READ
-                                        MORE</a>
+                                    <p class="text-sm xl:text-lg">{post.excerpt}</p>
+                                    <div class="flex justify-end md:justify-start pr-4">
+                                        <a class="mt-4 md:mt-8 xl:mt-4 px-10 btn btn-primary text-white hover:bg-primary/90 hover:text-white retrome-shadow">READ
+                                            MORE</a>
+                                    </div>
                                 </div>
                             </div>
                 ))}
