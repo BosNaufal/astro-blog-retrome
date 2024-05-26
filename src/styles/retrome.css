@@ -6,3 +6,27 @@
 .retrome-shadow-sm {
     box-shadow: 2px 2px 0 1px #000;
 }
+
+.prose :where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    @apply mt-3;
+}
+
+/* References: https://stackoverflow.com/a/15844571 (Responsive youtube embed) */
+.retrome-videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+/* References: https://stackoverflow.com/a/15844571 (Responsive youtube embed) */
+.retrome-videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

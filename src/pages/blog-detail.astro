@@ -5,6 +5,7 @@ import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
 import Navbar from "../components/Navbar.astro";
 import Pagination from "../components/Pagination.astro";
 import SubscribeForm from "../components/SubscribeForm.astro";
+import PostMeta from "../components/PostMeta.astro";
 
 const postList = [
     {
@@ -55,43 +56,110 @@ const postList = [
 <Navbar/>
 <main class="pt-10">
     <div class="container container-lg mx-auto px-4">
-        <div class="lg:flex">
-            <div class="post-list lg:w-8/12">
-                {postList.map((post, index) => (
-                    ((postList.length - 1) / 2) === index ?
-                            <div class="bg-accent mb-10 py-8 xl:py-12 px-8 retrome-shadow border-4 rounded-md">
-                                <div class="pl-2">
-                                    <h3 class="widget-title text-2xl font-bold mb-1">Subscribe to our Newsletter</h3>
-                                    <p>Subscribe to our email newsletter to get the latest posts delivered right to your
-                                        email.</p>
-                                </div>
-                                <SubscribeForm/>
-                            </div>
-                        :
-                            <div class="post-item md:flex mb-12 gap-10">
-                                <div class="mr-10 xl:mr-0 flex-1">
-                                    <div class="border-8 rounded-md retrome-shadow bg-gray-200 w-full h-[330px] lg:w-[330px]"></div>
-                                </div>
-                                <div class="mt-4">
-                                    <h2 class="post-title text-lg leading-normal lg:text-2xl font-bold"><a
-                                            href="#">{post.title}</a>
-                                    </h2>
-                                    <div class="post-meta flex items-center my-4 text-gray-700">
-                                        <div class="flex items-center mr-4">
-                                            <div class="rounded-full mr-2 bg-gray-200 rounded-full w-[30px] h-[30px]"></div>
-                                            <div class="post-author">By <a href="#"
-                                                                           class="btn-link font-bold">BosNaufal</a>
-                                            </div>
-                                        </div>
-                                        <div class="post-date">June 25, 2024</div>
-                                    </div>
-                                    <p class="text-sm lg:text-lg">{post.excerpt}</p>
-                                    <a class="mt-6 btn btn-primary text-white hover:bg-primary/90 hover:text-white retrome-shadow">READ
-                                        MORE</a>
-                                </div>
-                            </div>
-                ))}
-                <Pagination/>
+        <div class="lg:flex flex-wrap">
+            <div class="main-area w-full lg:w-8/12">
+                <h1 class="post-title text-3xl font-bold">Mastering the Art of Minimalist Web Design</h1>
+                <PostMeta/>
+                <p class="post-subtitle text-gray-700 border-b border-gray-200 pb-6 pt-4 mb-8 text-lg">
+                    <em>Less is more in web design. Learn how to create clean, user-friendly websites with a
+                        minimalist
+                        approach, focusing on simplicity, whitespace, and essential content.</em>
+                </p>
+                <div class="post-detail prose max-w-full pr-4">
+                    <h2>What is Minimalist Web Design?</h2>
+                    <p>Minimalist web design is a style that emphasizes simplicity and the removal of non-essential
+                        elements. This approach creates a clean and uncluttered interface, making it easier for users to
+                        navigate and find information.</p>
+
+                    <h3>The Principles of Minimalist Web Design</h3>
+                    <ul>
+                        <li><strong>Simplicity:</strong> Focus on essential elements and remove unnecessary components.
+                        </li>
+                        <li><strong>Whitespace:</strong> Use whitespace effectively to create a clean and organized
+                            layout.
+                        </li>
+                        <li><strong>Typography:</strong> Choose clear, legible fonts and use them consistently.</li>
+                        <li><strong>Color:</strong> Use a limited color palette to maintain a cohesive design.</li>
+                        <li><strong>Content:</strong> Prioritize important content and present it in a straightforward
+                            manner.
+                        </li>
+                    </ul>
+
+                    <h3>Benefits of Minimalist Web Design</h3>
+                    <ol>
+                        <li>Improved user experience</li>
+                        <li>Faster load times</li>
+                        <li>Easier navigation</li>
+                        <li>Enhanced focus on content</li>
+                        <li>Timeless aesthetic appeal</li>
+                    </ol>
+
+                    <blockquote>
+                        "Simplicity is the ultimate sophistication." – Leonardo da Vinci
+                    </blockquote>
+
+                    <h2>Implementing Minimalist Design</h2>
+
+                    <h3>Focus on Essential Elements</h3>
+                    <p>When designing a minimalist website, start by identifying the core elements that are necessary
+                        for
+                        functionality and user experience. Remove any elements that do not serve a clear purpose.</p>
+
+                    <h4>Example Code:</h4>
+                    <pre><code>
+&lt;div class="minimalist-design"&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Welcome to My Minimalist Website&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;
+        &lt;p&gt;This is a simple, clean, and functional website.&lt;/p&gt;
+    &lt;/main&gt;
+&lt;/div&gt;
+            </code></pre>
+
+                    <h3>Use of Whitespace</h3>
+                    <p>Whitespace, or negative space, is the empty space around elements in a design. Effective use of
+                        whitespace enhances readability and allows users to focus on the important content.</p>
+
+                    <img class="w-full" src="https://placehold.co/800x500/png"
+                         alt="Example of effective use of whitespace">
+
+                    <h3>Consistent Typography</h3>
+                    <p>Choose a font that is easy to read and fits the overall aesthetic of your website. Use different
+                        font
+                        sizes and weights to create a visual hierarchy, but avoid using too many different fonts.</p>
+
+                    <h3>Limited Color Palette</h3>
+                    <p>A limited color palette helps create a cohesive and visually appealing design. Choose a primary
+                        color, a secondary color, and a few accent colors to maintain consistency.</p>
+
+                    <h2>Conclusion</h2>
+                    <p>Minimalist web design is about more than just removing elements. It's about creating a
+                        functional,
+                        user-friendly experience that highlights essential content and makes navigation intuitive. By
+                        focusing on simplicity, whitespace, typography, and color, you can create a website that is both
+                        aesthetically pleasing and highly effective.</p>
+
+                    <hr>
+
+                    <h3>Watch: The Beauty of Minimalist Design</h3>
+
+                    <div class="retrome-videowrapper">
+                        <iframe class="youtube-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                                allowfullscreen></iframe>
+                    </div>
+
+                    <p>For more tips and tricks on web design, <a href="https://www.example.com/blog">visit our blog</a>.
+                    </p>
+
+                </div>
             </div>
             <div class="sidebar hidden lg:block lg:w-4/12 lg:pl-8">
 
