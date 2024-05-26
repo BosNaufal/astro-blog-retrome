@@ -38,12 +38,12 @@ const menus = [
         <div class="navbar-start flex items-center">
             <a class="btn btn-ghost -mt-1 hover:bg-transparent text-xl">RETROME</a>
         </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="flex items-center">
+        <div class="navbar-center justify-end hidden lg:flex">
+            <ul class="flex items-center justify-end">
                 {menus.map((item, index) => (
                         <li class="dropdown dropdown-hover">
                             <a href={item.link}
-                               class="btn btn-ghost flex items-center uppercase text-lg hover:bg-transparent focus:bg-transparent m-1">
+                               class="font-bold px-4 text-sm xl:text-md flex items-center uppercase xl:text-md hover:bg-transparent focus:bg-transparent m-1">
                                 <span>{item.text}</span>
                                 {item.submenus && item.submenus.length > 0 ?
                                         <svg class="-mt-1" width="25" height="25" viewBox="0 0 15 15" fill="none"
@@ -64,22 +64,18 @@ const menus = [
                                 : null}
                         </li>
                 ))}
-                <li class="dropdown dropdown-hover">
-                    <a href="#" class="btn btn-ghost text-lg hover:bg-transparent focus:bg-transparent">
-                        <div class="leading-none">
-                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
-                                      fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                        <span class="uppercase">Search</span>
-                    </a>
-                </li>
             </ul>
+
+            <button class="btn ml-10 uppercase btn-active btn-secondary text-black hover:text-black retrome-shadow px-6 xl:px-8">
+                <div class="leading-none">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
+                              fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <span>Search</span>
+            </button>
         </div>
-        <div class="navbar-end">
-        </div>
-        <a class="btn btn-active btn-secondary text-black hover:text-black retrome-shadow px-8">SUBSCRIBE</a>
     </div>
 </div>

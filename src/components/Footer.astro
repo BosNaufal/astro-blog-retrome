@@ -1,11 +1,12 @@
 ---
+import SubscribeForm from "./SubscribeForm.astro";
 const today = new Date();
 ---
 
 <footer class="bg-black text-white mt-20">
     <div class="container container-lg mx-auto px-4">
-        <div class="flex py-10 pt-16">
-            <div class="w-1/3 px-8 pl-0">
+        <div class="flex flex-wrap py-10 pt-16">
+            <div class="w-full lg:w-1/3 px-8 pl-0">
                 <div>
                     <h4 class="font-bold text-2xl mb-2">Retrome - Astro Theme</h4>
                     <p class="text-sm mb-6">Experience the cutting-edge of modern themes, aligned with the latest trends
@@ -15,41 +16,35 @@ const today = new Date();
                     <p class="text-sm mb-6">Check more themes like this on estudiopatagon.com</p>
                 </div>
 
-                <form x-data="{ isFocus: false }"
-                      :class="isFocus ? 'border-primary' : 'border-black'"
-                      class="border-4 flex items-center bg-white rounded-3xl mt-4 -ml-4">
-                    <input @focus="isFocus = true" @blur="isFocus = false" type="text"
-                           class="input w-full py-6 text-lg focus:outline-none focus:border-none px-6"
-                           placeholder="your email here..."/>
-                    <button class="btn btn-secondary py-6 h-auto hover:bg-secondary/110 hover:border-transparent rounded-l-none rounded-3xl px-8">
-                        SUBSCRIBE
-                    </button>
-                </form>
+                <SubscribeForm/>
             </div>
-            <div class="w-1/3 px-8 border-l border-r border-white/30">
+            <div class="w-full mt-12 lg:mt-0 lg:w-1/3 lg:px-8 lg:border-l lg:border-r border-white/30">
                 <div>
                     <h4 class="font-bold text-2xl mb-4">Quick Links</h4>
                     <ul>
-                        <li><a class="block text-sm py-2 cursor-pointer" href="#">Home</a></li>
-                        <li><a class="block text-sm py-2 cursor-pointer" href="#">Features</a></li>
-                        <li><a class="block text-sm py-2 cursor-pointer" href="#">Contact</a></li>
-                        <li><a class="block text-sm py-2 cursor-pointer" href="#">Privacy Policy</a></li>
-                        <li><a class="block text-sm py-2 cursor-pointer" href="#">Term & Conditions</a></li>
+                        <li><a class="block hover:underline text-sm py-2 cursor-pointer" href="#">Home</a></li>
+                        <li><a class="block hover:underline text-sm py-2 cursor-pointer" href="#">Features</a></li>
+                        <li><a class="block hover:underline text-sm py-2 cursor-pointer" href="#">Contact</a></li>
+                        <li><a class="block hover:underline text-sm py-2 cursor-pointer" href="#">Privacy Policy</a>
+                        </li>
+                        <li><a class="block hover:underline text-sm py-2 cursor-pointer" href="#">Term & Conditions</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="w-1/3 px-8 pr-0">
+            <div class="w-full mt-12 lg:mt-0 lg:w-1/3 lg:px-8 lg:pr-0">
                 <div>
                     <h4 class="font-bold text-2xl mb-2">Contact Us</h4>
 
                     <div class="contact-text my-6">
                         <div class="flex items-center mb-1 space-x-2">
                             <div class="badge badge-accent font-bold">PHONE</div>
-                            <div>(022) 123 45 67</div>
+                            <a class="hover:underline" href="tel:0221234567">(022) 123 45 67</a>
                         </div>
                         <div class="flex items-center mb-1 space-x-2">
                             <div class="badge badge-accent font-bold">EMAIL</div>
-                            <div>bosnaufalemail@gmail.com</div>
+                            <a class="hover:underline"
+                               href="mailto:bosnaufalemail@gmail.com">bosnaufalemail@gmail.com</a>
                         </div>
                     </div>
 
@@ -92,7 +87,7 @@ const today = new Date();
             </div>
         </div>
     </div>
-    <div class="text-center py-4 pb-8">
+    <div class="text-center text-white/80 py-4 pb-8">
         &copy; 2024-{today.getFullYear()} BosNaufal. All rights reserved. Powered by Astro
     </div>
 </footer>

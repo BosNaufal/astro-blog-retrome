@@ -1,0 +1,66 @@
+---
+/**
+    Based on hyperUI: https://www.hyperui.dev/components/application-ui/pagination
+    **/
+---
+<ol class="flex justify-center gap-2 text-xs font-medium mt-20">
+    <li>
+        <a href="#"
+           class="inline-flex transition-all hover:bg-secondary py-2 px-4 min-h-9 items-center justify-center rounded border-2 retrome-shadow-sm border-black bg-white text-black rtl:rotate-180"
+        ><span class="sr-only">Prev Page</span>
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 lg:h-4 lg:w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+            >
+                <path
+                        fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                />
+            </svg>
+        </a>
+    </li>
+
+    <li>
+        <a href="#"
+           class="hidden md:block transition-all hover:bg-secondary py-2 px-4 mx-1 min-h-9 rounded border-2 retrome-shadow-sm border-black bg-white text-center text-black"
+        >1</a>
+    </li>
+
+    <li class="hidden md:block transition-all hover:bg-secondary py-2 px-4 mx-1 min-h-9 rounded border-black border-2 retrome-shadow-sm bg-secondary text-center text-black">
+        2
+    </li>
+
+    <li>
+        <a href="#"
+           class="hidden md:block transition-all hover:bg-secondary py-2 px-4 mx-1 min-h-9 rounded border-2 retrome-shadow-sm border-black bg-white text-center text-black"
+        >3</a>
+    </li>
+
+    <li>
+        <a href="#"
+           class="hidden md:block transition-all hover:bg-secondary py-2 px-4 mx-1 min-h-9 rounded border-2 retrome-shadow-sm border-black bg-white text-center text-black"
+        >4</a>
+    </li>
+
+    <li>
+        <a href="#"
+           class="inline-flex transition-all hover:bg-secondary py-2 px-4 min-h-9 items-center justify-center rounded border-2 retrome-shadow-sm border-black bg-white text-black rtl:rotate-180"
+        ><span class="sr-only">Next Page</span>
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 lg:h-4 lg:w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+            >
+                <path
+                        fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                />
+            </svg>
+        </a>
+    </li>
+</ol>
