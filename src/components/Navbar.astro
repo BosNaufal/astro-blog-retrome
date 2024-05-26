@@ -28,7 +28,7 @@ const menus = [
     },
 ]
 ---
-<div class="navbar bg-black text-white border-b border-t-4 border-black">
+<div class="navbar bg-neutral text-white border-b border-t-4 border-neutral">
     <div class="container container-lg mx-auto px-4">
         <div class="navbar-start flex items-center">
             <a class="btn btn-ghost -mt-1 hover:bg-transparent text-xl">RETROME</a>
@@ -49,7 +49,7 @@ const menus = [
                                     : null}
                             </a>
                             {item.submenus && item.submenus.length > 0 ?
-                                    <ul class="dropdown-content text-black retrome-shadow-sm border-4 border-black z-[1] menu p-2 bg-base-100 rounded-box w-52">
+                                    <ul class="dropdown-content text-neutral retrome-shadow-sm border-4 border-neutral z-[1] menu p-2 bg-base-100 rounded-box w-52">
                                         {item.submenus.map((submenu) => (
                                                 <li><a href={item.link}
                                                        class="text-sm font-bold uppercase rounded-none hover:bg-secondary">{submenu.text}</a>
@@ -61,7 +61,7 @@ const menus = [
                 ))}
             </ul>
 
-            <button class="btn ml-10 uppercase btn-active btn-secondary text-black hover:text-black retrome-shadow px-6 xl:px-8">
+            <button class="btn ml-10 uppercase btn-active btn-secondary bg-secondary text-neutral hover:text-neutral retrome-shadow px-6 xl:px-8">
                 <div class="leading-none">
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                          xmlns="http://www.w3.org/2000/svg">

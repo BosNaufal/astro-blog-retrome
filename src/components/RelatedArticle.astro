@@ -1,0 +1,61 @@
+---
+const postList = [
+    {
+        "title": "The Ultimate Guide to Responsive Web Design",
+        "excerpt": "Learn how to create websites that look great on any device. This comprehensive guide covers the principles of responsive design, including flexible grids, fluid images, and media queries."
+    },
+    {
+        "title": "Top 10 Web Design Trends to Watch in 2024",
+        "excerpt": "Stay ahead of the curve with these cutting-edge web design trends. From dark mode and 3D visuals to minimalism and microinteractions, discover what's shaping the future of web design."
+    },
+    {
+        "title": "How to Improve Website Accessibility for All Users",
+        "excerpt": "Accessibility is crucial for an inclusive web. This post explores essential strategies for making your website accessible, including ARIA roles, keyboard navigation, and color contrast considerations."
+    },
+    {
+        "title": "Mastering the Art of Minimalist Web Design",
+        "excerpt": "Less is more in web design. Learn how to create clean, user-friendly websites with a minimalist approach, focusing on simplicity, whitespace, and essential content."
+    },
+    {
+        "title": "SEO Best Practices for Web Designers",
+        "excerpt": "Boost your website’s search engine ranking with these SEO tips tailored for web designers. From optimizing images and using semantic HTML to improving site speed, ensure your design is search-engine friendly."
+    },
+    {
+        "title": "Creating Stunning Visual Hierarchy in Web Design",
+        "excerpt": "Visual hierarchy guides users through your content effectively. Discover techniques to establish a clear visual path using size, color, contrast, and alignment."
+    },
+    {
+        "title": "The Role of Typography in Modern Web Design",
+        "excerpt": "Typography is more than just choosing fonts. This post delves into the impact of typography on user experience and design aesthetics, including tips for selecting and pairing fonts."
+    },
+    {
+        "title": "A Beginner's Guide to CSS Grid Layout",
+        "excerpt": "Unlock the power of CSS Grid Layout with this beginner-friendly guide. Learn how to create complex, responsive grid-based layouts with ease and flexibility."
+    },
+    {
+        "title": "Effective Use of Color in Web Design",
+        "excerpt": "Color can make or break your website design. Explore the principles of color theory, the psychology of color, and practical tips for creating harmonious and impactful color schemes."
+    }
+]
+---
+
+<div class="px-6 py-4">
+    <h4 class="widget-title text-2xl font-bold mb-6">Related Article</h4>
+    <div class="popular-post flex flex-wrap mb-4">
+        {postList.slice(0, 4).map((post, index) => (
+                <div class="post-item w-1/2 flex mb-6 xl:mb-10">
+                    <div class="mr-6">
+                        <div class="border-2 rounded-md retrome-shadow bg-gray-200 w-[80px] xl:w-[90px] h-[80px] xl:h-[90px]"></div>
+                    </div>
+                    <div class="pr-6">
+                        <h2 class="post-title text-sm xl:text-md font-bold"><a href="#">{post.title}</a>
+                        </h2>
+                        <div class="post-meta my-2 text-gray-700">
+                            <div class="post-date text-xs xl:text-sm">June 25, 2024</div>
+                        </div>
+                    </div>
+                </div>
+        ))}
+    </div>
+</div>
+
