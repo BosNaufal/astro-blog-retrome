@@ -1,4 +1,4 @@
-# Astro Starter Kit: Blog
+# (WIP) BosNaufal Astro Starter Kit: Blog
 
 ```sh
 npm create astro@latest -- --template blog
