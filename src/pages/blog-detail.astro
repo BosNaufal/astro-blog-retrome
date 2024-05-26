@@ -321,16 +321,16 @@ const postList = [
                     </div>
                 </div>
 
-                <div class="retrome-widget rounded-lg retrome-shadow border-4 bg-accent px-6 py-4 mt-6">
-                    <h4 class="widget-title text-2xl font-bold mb-6">Leave a Reply</h4>
-                    <div class="comment-input flex flex-wrap mb-4">
-                        <div class="flex gap-4 w-full mb-4">
-                            <div class="w-1/2">
+                <div class="retrome-widget rounded-lg retrome-shadow border-4 bg-accent px-4 md:px-6 py-4 mt-6">
+                    <h4 class="widget-title text-xl md:text-2xl font-bold mb-4 md:mb-6">Leave a Reply</h4>
+                    <form class="comment-input flex flex-wrap mb-4">
+                        <div class="flex flex-wrap gap-4 w-full mb-4">
+                            <div class="w-full md:w-1/2">
                                 <input class="w-full rounded-lg focus:border-primary p-2 outline-none border-4 retrome-shadow"
                                        type="text"
                                        placeholder="Name"/>
                             </div>
-                            <div class="w-1/2">
+                            <div class="w-full md:w-1/2">
                                 <input class="w-full rounded-lg focus:border-primary p-2 outline-none border-4 retrome-shadow"
                                        type="email"
                                        placeholder="Email"/>
@@ -352,7 +352,11 @@ const postList = [
                                 <span class="label-text">Save my name, email, and website in this browser for the next time I comment.</span>
                             </label>
                         </div>
-                    </div>
+
+                        <button class="btn btn-secondary hover:border-black hover:bg-secondary/105 retrome-shadow w-full mt-6">
+                            Send a Reply
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="sidebar hidden lg:block lg:w-4/12 lg:pl-8">
