@@ -58,6 +58,10 @@ const postList = [
     <div class="container container-lg mx-auto px-4">
         <div class="lg:flex flex-wrap">
             <div class="main-area w-full lg:w-8/12">
+                <div class="retrome-shadow rounded-lg border-8 mb-10 -ml-2 mr-2">
+                    <img class="w-full" src="https://placehold.co/800x418/png"
+                         alt="Post Cover">
+                </div>
                 <h1 class="post-title text-3xl font-bold">Mastering the Art of Minimalist Web Design</h1>
                 <PostMeta/>
                 <p class="post-subtitle text-gray-700 border-b border-gray-200 pb-6 pt-4 mb-8 text-lg">
@@ -174,7 +178,7 @@ const postList = [
                     <h3 class="widget-title text-2xl font-bold mb-6">About Author</h3>
                     <div class="flex">
                         <div class="mr-4">
-                            <div class="rounded-full mr-2 bg-gray-200 rounded-full w-[120px] h-[120px]"></div>
+                            <div class="rounded-full mr-2 bg-gray-200 w-[120px] h-[120px]"></div>
                         </div>
                         <div>
                             <div>
@@ -219,6 +223,137 @@ const postList = [
                 <RelatedArticle/>
 
 
+                <div class="px-6 py-4">
+                    <h4 class="widget-title text-2xl font-bold mb-6">Comments</h4>
+                    <div class="comment-list flex flex-wrap mb-4">
+                        <div class="comment-item flex items-start gap-4 mt-6">
+                            <div>
+                                <div class="rounded-full mr-2 bg-gray-200 w-[60px] h-[60px]"></div>
+                            </div>
+
+                            <div>
+                                <div class="flex items-center">
+                                    <b class="text-md/tight font-bold text-gray-900">Admin</b>
+                                    <div class="text-xs ml-2">
+                                        <span>on June 6, 2024</span>
+                                    </div>
+                                </div>
+                                <p class="mt-0.5 text-sm text-gray-700">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas
+                                    distinctio
+                                    nesciunt quas non animi.
+                                </p>
+
+                                <hr class="mt-6"/>
+
+                                <div class="comment-item flex items-start gap-4 mt-6">
+                                    <div>
+                                        <div class="rounded-full mr-2 bg-gray-200 w-[60px] h-[60px]"></div>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex items-center">
+                                            <b class="text-md/tight font-bold text-gray-900">Admin</b>
+                                            <div class="text-xs ml-2">
+                                                <span>on June 6, 2024</span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-0.5 text-sm text-gray-700">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas
+                                            distinctio
+                                            nesciunt quas non animi.
+                                        </p>
+
+                                        <hr class="mt-6"/>
+
+                                    </div>
+                                </div>
+
+                                <div class="comment-item flex items-start gap-4 mt-6">
+                                    <div>
+                                        <div class="rounded-full mr-2 bg-gray-200 w-[60px] h-[60px]"></div>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex items-center">
+                                            <b class="text-md/tight font-bold text-gray-900">Admin</b>
+                                            <div class="text-xs ml-2">
+                                                <span>on June 6, 2024</span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-0.5 text-sm text-gray-700">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas
+                                            distinctio
+                                            nesciunt quas non animi.
+                                        </p>
+
+                                        <hr class="mt-6"/>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="comment-item flex items-start gap-4 mt-6">
+                            <div>
+                                <div class="rounded-full mr-2 bg-gray-200 w-[60px] h-[60px]"></div>
+                            </div>
+
+                            <div>
+                                <div class="flex items-center">
+                                    <b class="text-md/tight font-bold text-gray-900">Admin</b>
+                                    <div class="text-xs ml-2">
+                                        <span>on June 6, 2024</span>
+                                    </div>
+                                </div>
+                                <p class="mt-0.5 text-sm text-gray-700">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas
+                                    distinctio
+                                    nesciunt quas non animi.
+                                </p>
+
+                                <hr class="mt-6"/>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="retrome-widget rounded-lg retrome-shadow border-4 bg-accent px-6 py-4 mt-6">
+                    <h4 class="widget-title text-2xl font-bold mb-6">Leave a Reply</h4>
+                    <div class="comment-input flex flex-wrap mb-4">
+                        <div class="flex gap-4 w-full mb-4">
+                            <div class="w-1/2">
+                                <input class="w-full rounded-lg focus:border-primary p-2 outline-none border-4 retrome-shadow"
+                                       type="text"
+                                       placeholder="Name"/>
+                            </div>
+                            <div class="w-1/2">
+                                <input class="w-full rounded-lg focus:border-primary p-2 outline-none border-4 retrome-shadow"
+                                       type="email"
+                                       placeholder="Email"/>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 w-full mb-4">
+                            <input class="w-full rounded-lg focus:border-primary p-2 outline-none border-4 retrome-shadow"
+                                   type="url"
+                                   placeholder="Website https://"/>
+                        </div>
+                        <textarea
+                                class="w-full rounded-lg focus:border-primary p-4 outline-none border-4 retrome-shadow"
+                                placeholder="Write a Comment" rows="6"></textarea>
+
+                        <div class="form-control mt-6 pl-2">
+                            <label class="label cursor-pointer">
+                                <input type="checkbox"
+                                       class="checkbox mr-4 border-black border-2 checked:border-black bg-white [--chkbg:theme(colors.indigo.600)] [--chkfg:yellow]"/>
+                                <span class="label-text">Save my name, email, and website in this browser for the next time I comment.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="sidebar hidden lg:block lg:w-4/12 lg:pl-8">
                 <div class="retrome-widget retrome-shadow border-4 rounded-md bg-lime-50 px-6 py-4 mb-10">
